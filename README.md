@@ -20,41 +20,28 @@ The website requires **no build step, no npm, no package manager, and no server-
 
 ---
 
-### 1. Replacing the Contact Email
+### 1. Contact Email Configuration
 
-The public files contain the placeholder `REPLACE_WITH_CONTACT_EMAIL`. By default, the website detects this placeholder and displays a neutral *"Contact details forthcoming"* notice so visitors never see a broken link or raw template code.
+The verified contact address (`sergey.golubkov@innerdialectica.com`) is already pre-configured across all contact buttons, header calls to action, and footer links.
 
-To activate the direct email buttons:
-1. Open `index.html` in any text editor (such as Notepad, TextEdit, or VS Code).
-2. Use the Search/Find function (`Ctrl+F` or `Cmd+F`) to find:
-   ```html
-   REPLACE_WITH_CONTACT_EMAIL
-   ```
-3. Replace all occurrences with your verified contact address (e.g. `sergey.golubkov@innerdialectica.com`):
-   ```html
-   href="mailto:collaborate@lpt-research.org?subject=LPT-RC%20Scientific%20Scoping%20Meeting"
-   ```
-4. Save `index.html`. The buttons will now open the visitor's mail client with the pre-filled subject line.
+If you ever wish to modify or update the email address:
+1. Open `index.html` in any text editor.
+2. Search for `mailto:` to update the email recipient address and default subject lines.
+3. Save `index.html`. The buttons will automatically open the visitor's mail client with the updated address.
 
 ---
 
-### 2. Adding the Founder's ORCID URL
+### 2. Founder's ORCID URL
 
-In `index.html`, the ORCID profile container has the placeholder `REPLACE_WITH_ORCID_URL` and `data-orcid-placeholder="true"`. By default, this element is automatically hidden so no dead links appear publicly.
+The founder's verified ORCID profile is fully configured and active across the site:
+- **ORCID iD:** [`https://orcid.org/0000-0002-5288-7817`](https://orcid.org/0000-0002-5288-7817)
 
-To display the founder's ORCID profile:
-1. Open `index.html` in a text editor.
-2. Locate the ORCID section:
-   ```html
-   <div id="orcid-container" data-orcid-placeholder="true">
-     <a href="REPLACE_WITH_ORCID_URL" target="_blank" rel="noopener noreferrer" class="reference-doi" id="founder-orcid-link">
-       ORCID Profile
-     </a>
-   </div>
-   ```
-3. Replace `REPLACE_WITH_ORCID_URL` with the full ORCID link (e.g., `https://orcid.org/0000-0002-XXXX-XXXX`).
-4. Remove the attribute `data-orcid-placeholder="true"`.
-5. Save `index.html`.
+The direct button appears in the **Founder and Research Lead** section (`#founder`), providing instant verification of Sergey V. Golubkov's authorship, doctoral credentials, and published works (including the 2026 Zenodo theoretical master, 2002 SBP article, and 2000 foundational publications).
+
+If you ever need to update or change the ORCID link:
+1. Open `index.html` and search for `founder-orcid-link`.
+2. Update the `href` attribute.
+3. Save and commit.
 
 ---
 
